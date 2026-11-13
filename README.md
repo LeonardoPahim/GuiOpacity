@@ -1,8 +1,14 @@
-# GuiOpacity
+﻿# GuiOpacity
 
 A client-side mod for Minecraft 1.7.10 (GT New Horizons) that reduces the dark overlay drawn behind inventories and other GUIs.
 
 > **Status: WIP.** It doesn't remove the overlay on most machines yet.
+
+## Comparison
+
+| Mod off (vanilla) | Mod on |
+|---|---|
+| ![Mod off](images/mod-off.png) | ![Mod on](images/mod-on.png) |
 
 ## Install
 

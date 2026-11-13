@@ -9,13 +9,19 @@ public class Config {
     /** Multiplier applied to the alpha of the dark overlay. 1.0 = vanilla, 0.0 = no overlay. */
     public static float backgroundOpacity = 0.5f;
 
-    public static void synchronizeConfiguration(File configFile) {
-        Configuration configuration = new Configuration(configFile);
+    public static Configuration configuration;
 
+    public static void synchronizeConfiguration(File configFile) {
+        configuration = new Configuration(configFile);
+        synchronizeConfiguration();
+    }
+
+    /** Reads values from the Configuration object (also called after edits in the in-game config screen). */
+    public static void synchronizeConfiguration() {
         backgroundOpacity = configuration.getFloat(
             "backgroundOpacity",
             Configuration.CATEGORY_GENERAL,
-            backgroundOpacity,
+            0.5f,
             0.0f,
             1.0f,
             "Opacity of the dark overlay drawn behind inventories and other GUIs, as a fraction of vanilla. 1.0 = vanilla, 0.5 = half as dark, 0.0 = no darkening at all.");

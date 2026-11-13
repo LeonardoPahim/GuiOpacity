@@ -1,4 +1,4 @@
-﻿# GuiOpacity
+# GuiOpacity
 
 A client-side mod for Minecraft 1.7.10 (GT New Horizons) that reduces the dark overlay drawn behind inventories and other GUIs.
 
@@ -18,7 +18,7 @@ A client-side mod for Minecraft 1.7.10 (GT New Horizons) that reduces the dark o
 
 ## Config
 
-Edit `backgroundOpacity` in `config/guiopacity.cfg`, then restart the game.
+Change it in game via **Mods → GuiOpacity → Config**, or edit `backgroundOpacity` in `config/guiopacity.cfg`.
 
 - `1.0`: vanilla overlay
 - `0.5`: half as dark (default)
@@ -35,3 +35,16 @@ The jar is written to `build/libs/`. Use the one without a `-dev` or `-sources` 
 ## License
 
 MIT
+
+## Versioning and releases
+
+The version comes from the git tag. Use plain `MAJOR.MINOR.PATCH` tags with no `v` prefix (enforced by `versionPattern` in `gradle.properties`). Untagged builds get a name like `guiopacity-<commit>-main+<hash>[-dirty]`.
+
+To cut a release:
+
+```
+git tag 0.1.0
+git push origin 0.1.0
+```
+
+The `Release` workflow then builds the jar and publishes a GitHub release with it.
